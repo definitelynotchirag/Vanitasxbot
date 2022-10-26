@@ -26,7 +26,6 @@ import asyncio
 import time
 from inspect import getfullargspec
 from os import path
-import keep_alive
 
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
@@ -47,7 +46,7 @@ MOD_LOAD = []
 MOD_NOLOAD = []
 bot_start_time = time.time()
 
-keep_alive.keep_alive()
+
 
 # MongoDB client
 print("[INFO]: INITIALIZING DATABASE")
