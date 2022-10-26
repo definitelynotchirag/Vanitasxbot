@@ -26,8 +26,6 @@ import importlib
 import re
 from contextlib import closing, suppress
 
-import keep_alive
-
 from pyrogram import enums, filters, idle
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from uvloop import install
