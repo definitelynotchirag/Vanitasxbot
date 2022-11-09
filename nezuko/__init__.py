@@ -32,7 +32,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram import Client
 from pyrogram.types import Message
 from pyromod import listen
-from Python_ARQ import ARQ
+# from Python_ARQ import ARQ
 from telegraph import Telegraph
 
 from sample_config import *
@@ -46,6 +46,9 @@ MOD_LOAD = []
 MOD_NOLOAD = []
 bot_start_time = time.time()
 
+from .arq import ARQ, Arq, GenericApiError, InvalidApiKey, RateLimitExceeded
+
+__all__ = ["Arq", "ARQ", "InvalidApiKey", "GenericApiError", "RateLimitExceeded"]
 
 
 # MongoDB client
