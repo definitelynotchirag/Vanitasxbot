@@ -1,4 +1,4 @@
-import asyncio
+# import asyncio
 from base64 import b64decode
 from json import dumps
 from re import match, sub
@@ -68,8 +68,9 @@ class Arq:
                         "Rate limit exceeded, https://t.me/ARQupdates/95"
                     )
                 response = await resp.json()
-        except asyncio.TimeoutError:
-            raise Exception("Failed to communicate with ARQ server.")
+         except:
+#          asyncio.TimeoutError:
+#             raise Exception("Failed to communicate with ARQ server.")
         return DotMap(response)
 
     async def _post(self, route, params):
@@ -85,8 +86,9 @@ class Arq:
                         "Invalid API key, Get an api key from @ARQRobot"
                     )
                 response = await resp.json()
-        except asyncio.TimeoutError:
-            raise Exception("Failed to communicate with ARQ server.")
+        except:
+#         except asyncio.TimeoutError:
+#             raise Exception("Failed to communicate with ARQ server.")
         return DotMap(response)
 
     async def _post_data(self, route, data, header=None, timeout=15):
@@ -106,8 +108,10 @@ class Arq:
                         "Invalid API key, Get an api key from @ARQRobot"
                     )
                 response = await resp.json()
-        except asyncio.TimeoutError:
-            raise Exception("Failed to communicate with ARQ server.")
+         except:        
+             
+#         except asyncio.TimeoutError:
+#             raise Exception("Failed to communicate with ARQ server.")
         return DotMap(response)
 
     async def torrent(self, query: str):
