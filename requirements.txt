@@ -27,3 +27,6 @@ jikanpy
 cinemagoer
 flask
 asyncio
+dotmap
+aiohttp
+aiofiles
