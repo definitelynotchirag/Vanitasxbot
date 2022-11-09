@@ -71,7 +71,7 @@ class Arq:
         except:
 #          asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-        return DotMap(response)
+       return DotMap(response)
 
     async def _post(self, route, params):
         try:
@@ -89,7 +89,7 @@ class Arq:
         except:
 #         except asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-        return DotMap(response)
+       return DotMap(response)
 
     async def _post_data(self, route, data, header=None, timeout=15):
         headers = {"X-API-KEY": self.api_key}
@@ -112,7 +112,7 @@ class Arq:
              
 #         except asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-        return DotMap(response)
+       return DotMap(response)
 
     async def torrent(self, query: str):
         """
