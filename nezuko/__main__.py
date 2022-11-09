@@ -37,7 +37,7 @@ from nezuko.utils import paginate_modules
 from nezuko.utils.constants import MARKDOWN
 from nezuko.utils.dbfunctions import clean_restart_stage
 
-loop = asyncio.get_event_loop()
+# loop = asyncio.get_event_loop()
 
 HELPABLE = {}
 
