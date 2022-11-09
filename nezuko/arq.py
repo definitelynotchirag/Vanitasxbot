@@ -52,6 +52,7 @@ class Arq:
         self.session = aiohttp_session
 
     async def _fetch(self, route, timeout=15, **params):
+        
         try:
             async with self.session.get(
                 f"{self.api_url}/{route}",
@@ -69,9 +70,10 @@ class Arq:
                     )
                 response = await resp.json()
         except:
+            print("timeouterror")
 #          asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-       return DotMap(response)
+        return DotMap(response)
 
     async def _post(self, route, params):
         try:
@@ -87,9 +89,10 @@ class Arq:
                     )
                 response = await resp.json()
         except:
+            print("timeouterror")
 #         except asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-       return DotMap(response)
+        return DotMap(response)
 
     async def _post_data(self, route, data, header=None, timeout=15):
         headers = {"X-API-KEY": self.api_key}
@@ -109,10 +112,11 @@ class Arq:
                     )
                 response = await resp.json()
         except:        
+            print("timeouterror")
              
 #         except asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
-       return DotMap(response)
+        return DotMap(response)
 
     async def torrent(self, query: str):
         """
