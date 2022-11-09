@@ -68,7 +68,7 @@ class Arq:
                         "Rate limit exceeded, https://t.me/ARQupdates/95"
                     )
                 response = await resp.json()
-         except:
+        except:
 #          asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
         return DotMap(response)
@@ -108,7 +108,7 @@ class Arq:
                         "Invalid API key, Get an api key from @ARQRobot"
                     )
                 response = await resp.json()
-         except:        
+        except:        
              
 #         except asyncio.TimeoutError:
 #             raise Exception("Failed to communicate with ARQ server.")
